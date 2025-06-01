@@ -15,7 +15,10 @@ interface CommitStatsProps {
 }
 
 const CommitStats: React.FC<CommitStatsProps> = ({ data }) => {
-  const chartData = Object.entries(data).map(([type, count]) => ({
+  const filteredEntries = Object.entries(data).filter(
+    ([type]) => type !== "total_commits"
+  );
+  const chartData = filteredEntries.map(([type, count]) => ({
     type,
     count,
   }));
@@ -34,7 +37,7 @@ const CommitStats: React.FC<CommitStatsProps> = ({ data }) => {
 
   return (
     <div>
-      <h3>Commit Type Distriibution</h3>
+      <h3>Commit Type Distribution</h3>
       <ResponsiveContainer width="100%" height={250}>
         <BarChart data={chartData}>
           <CartesianGrid strokeDasharray="3 3" />
