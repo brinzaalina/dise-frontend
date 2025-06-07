@@ -1,6 +1,7 @@
 /* src/App.css */
 
 .app-container {
+  max-width: 80%;
   margin: 0 auto;
   padding: 2rem;
   font-family: "Segoe UI", Roboto, sans-serif;
@@ -132,6 +133,7 @@ li {
   border: 1px solid #ccc;
   border-radius: 8px;
   margin-top: 1rem;
+  align-items: center;
 }
 
 #release-select {

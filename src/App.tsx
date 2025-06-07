@@ -112,9 +112,9 @@ const App: React.FC = () => {
           <div className="section">
             <h2>Clustering Overview</h2>
             { clusterPlot ? (
-              <div className="cluster-plot">
+                <div className="cluster-plot" style={{ display: "flex", justifyContent: "center" }}>
                 <img src={`http://localhost:5000/download/${clusterPlot}`} alt="Cluster Plot" />
-              </div>
+                </div>
             ) : (
               <p>No cluster plot available.</p>
             )}
